@@ -1,4 +1,5 @@
-![Python application](https://github.com/caponetto/bhc/workflows/Python%20application/badge.svg) [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+![CI](https://github.com/caponetto/bayesian-hierarchical-clustering/workflows/Python%20application/badge.svg)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://github.com/caponetto/bayesian-hierarchical-clustering/blob/main/LICENSE)
 
 # Bayesian Hierarchical Clustering in python
 This is a python implementation of the Bayesian Hierarchical Clustering algorithm proposed by Heller & Ghahramani (2005).

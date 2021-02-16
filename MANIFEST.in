@@ -1,0 +1,10 @@
+include LICENSE
+include versioneer.py
+include bhc/_version.py
+
+exclude README.md
+
+recursive-exclude * __pycache__
+recursive-exclude * *.pyc
+recursive-exclude * *.pyo
+recursive-exclude * *.orig

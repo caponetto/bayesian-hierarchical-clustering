@@ -27,6 +27,11 @@ It also includes the Bayesian Rose Trees extension proposed by Blundell et al (2
 
 The files will be available in the `dist` folder.
 
+## Examples
+
+Examples can be found at [caponetto/bayesian-hierarchical-clustering-examples](https://github.com/caponetto/bayesian-hierarchical-clustering-examples).
+
+
 ## Contribute
 All contributions are welcome, so don't hesitate to submit a pull request. ;-)
 

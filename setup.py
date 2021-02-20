@@ -8,7 +8,7 @@ import versioneer
 
 NAME = "bhc"
 AUTHOR = "Guilherme Caponetto"
-URL = "https://github.com/caponetto/bhc"
+URL = "https://github.com/caponetto/bayesian-hierarchical-clustering"
 LICENSE = "GPL-3.0"
 DESCRIPTION = "Python implementation of Bayesian hierarchical clustering (BHC) and Bayesian rose trees (BRT) algorithms."
 

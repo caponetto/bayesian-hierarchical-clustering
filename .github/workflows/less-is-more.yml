@@ -1,0 +1,36 @@
+name: Artifact size validation
+
+on:
+  pull_request:
+    branches: "**"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8.3
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Build package
+        run: |
+          python setup.py sdist bdist_wheel
+
+      - name: Less is more
+        uses: caponetto/less-is-more@v0.0.5
+        with:
+          released_artifact_name: bhc*.tar.gz
+          artifact_path: dist/bhc*.tar.gz
+          max_increase_percentage: 10
+          github_token: ${{ secrets.BASIC_TOKEN }}

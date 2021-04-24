@@ -29,7 +29,7 @@ jobs:
           python setup.py sdist bdist_wheel
 
       - name: Less is more - tar.gz artifact
-        uses: caponetto/less-is-more@v0.0.5
+        uses: caponetto/less-is-more@v0.0.7
         with:
           released_artifact_name: bhc*.tar.gz
           artifact_path: dist/bhc*.tar.gz
@@ -37,7 +37,7 @@ jobs:
           github_token: ${{ secrets.BASIC_TOKEN }}
 
       - name: Less is more - whl artifact
-        uses: caponetto/less-is-more@v0.0.5
+        uses: caponetto/less-is-more@v0.0.7
         with:
           released_artifact_name: bhc*.whl
           artifact_path: dist/bhc*.whl

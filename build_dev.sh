@@ -7,5 +7,5 @@ coverage report -m
 coverage html -d coverage_report
 
 rm -fr dist
-python setup.py clean
-python setup.py sdist bdist_wheel > /dev/null
+rm -fr build
+python -m build --wheel --sdist

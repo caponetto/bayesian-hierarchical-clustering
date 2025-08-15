@@ -3,8 +3,7 @@
 # License: GPL 3.0
 
 import numpy as np
-from numpy.linalg import linalg
-from scipy.special.spfun_stats import multigammaln
+from scipy.special import multigammaln
 
 from bhc.api import AbstractPrior
 
@@ -41,7 +40,7 @@ class NormalInverseWishart(AbstractPrior):
         d = s_mat.shape[0]
         log_prior = LOG2 * (v * d / 2.0) + (d / 2.0) * np.log(2.0 * np.pi / r)
         log_prior += multigammaln(v / 2.0, d) - \
-            (v / 2.0) * np.log(linalg.det(s_mat))
+            (v / 2.0) * np.log(np.linalg.det(s_mat))
         return log_prior
 
     @staticmethod

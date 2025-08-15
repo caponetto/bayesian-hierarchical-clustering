@@ -1,0 +1,5 @@
+-r requirements.txt
+build>=0.10.0
+flake8
+coverage
+pytest

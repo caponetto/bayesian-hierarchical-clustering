@@ -9,23 +9,51 @@ It also includes the Bayesian Rose Trees extension proposed by Blundell et al (2
 > BLUNDELL, Charles; TEH, Yee Whye; HELLER, Katherine A. Bayesian rose trees. arXiv preprint arXiv:1203.3468, 2012.
 
 ## How to build from source
+
+### Using Conda (Recommended)
+
 1. Create an anaconda environment using the [environment.yml](environment.yml) file.
 
-    `$ conda env create -f environment.yml`
+    ```bash
+    $ conda env create -f environment.yml
+    ```
 
 2. Activate the environment after the installation is completed.
 
-    `$ conda activate bayesian-hierarchical-clustering`
+    ```bash
+    $ conda activate bayesian-hierarchical-clustering
+    ```
 
-3. Install the following libraries: `pytest`, `coverage` and `flake8`.
+3. Run the build script.
 
-    `$ conda install pytest coverage flake8`
+    ```bash
+    $ ./build_dev.sh
+    ```
 
-4. Run the `build_dev.sh` script.
+### Using pip
 
-    `$ ./build_dev.sh`
+Alternatively, if you prefer using pip:
 
-The files will be available in the `dist` folder.
+1. Create a virtual environment.
+
+    ```bash
+    $ python -m venv venv
+    $ source venv/bin/activate  # On Windows: venv\Scripts\activate
+    ```
+
+2. Install development dependencies.
+
+    ```bash
+    $ pip install -r requirements-dev.txt
+    ```
+
+3. Run the build script.
+
+    ```bash
+    $ ./build_dev.sh
+    ```
+
+The built packages will be available in the `dist` folder.
 
 ## Examples
 

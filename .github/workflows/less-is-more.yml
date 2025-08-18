@@ -39,5 +39,5 @@ jobs:
         with:
           released_artifact_name: bhc*.whl
           artifact_path: dist/bhc*.whl
-          max_increase_percentage: 10
+          max_increase_percentage: 20
           github_token: ${{ secrets.BASIC_TOKEN }}

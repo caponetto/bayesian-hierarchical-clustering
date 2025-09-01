@@ -6,13 +6,15 @@ from abc import ABC, abstractmethod
 
 
 class Result(object):
-    def __init__(self,
-                 arc_list,
-                 node_ids,
-                 last_log_p,
-                 weights,
-                 hierarchy_cut,
-                 n_clusters):
+    def __init__(
+        self,
+        arc_list,
+        node_ids,
+        last_log_p,
+        weights,
+        hierarchy_cut,
+        n_clusters,
+    ):
         self.arc_list = arc_list
         self.node_ids = node_ids
         self.last_log_p = last_log_p
@@ -30,7 +32,7 @@ class Arc(object):
         return self.source == other.source and self.target == other.target
 
     def __repr__(self):
-        return '{0} -> {1}'.format(str(self.source), str(self.target))
+        return "{0} -> {1}".format(str(self.source), str(self.target))
 
 
 class AbstractPrior(ABC):
@@ -46,7 +48,8 @@ class AbstractHierarchicalClustering(ABC):
 
 
 class AbstractBayesianBasedHierarchicalClustering(
-        AbstractHierarchicalClustering, ABC):
+    AbstractHierarchicalClustering, ABC
+):
     def __init__(self, data, model, alpha, cut_allowed):
         self.data = data
         self.model = model
